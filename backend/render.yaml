@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: career-scholarship-advisor-api
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: groq/openai/gpt-oss-120b
+      - key: DEMO_MODE
+        value: "false"
